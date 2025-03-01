@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalyTea - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/LOGO2.png">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div id="logo">
+            <img src="logo.png" alt="Vitaly Tea">
+        </div>
+    
+        <!-- Desktop Navigation -->
+        <nav class="top-nav">
+            <ul>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="order.html">ORDER</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Hamburger Menu (Mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileMenu">
+        <ul>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="order.html">ORDER</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <main class="main">
+        <div class="innertube">
+            <img id="wtv" src="images/homepage/wtv.png" alt="Welcome Text">
+            <p class="p1">Our products and services offer a lot more than you could think of.
+                From printing different kinds of materials and papers, bindings and stitching, and even more.
+                Here at Vitaly Tea, we offer all that, plus a cozy nook where you can sit, relax, and wait for your printing job to be finished.
+                And do not forget to grab our delicious mouthwatering drinks too.
+            </p>
+        </div>
+    </main>
+
+    <div id="buttonhp">
+        <a href="services.html">
+            <button>Explore!</button>
+        </a>
+    </div>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("show");
+    }
+</script>
+</body>
+</html>
