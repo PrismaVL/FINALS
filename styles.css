@@ -213,15 +213,31 @@ body {
 
     .explore-btn {
         position: relative;
-        top: 180px;
+        top: 250px;
         left: 0;
         scale: 1.6;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
 
 }
 
 @media screen and (max-width: 969px) {
+
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .explore-btn {
+        position: relative;
+        top: 130px;
+        left: 0;
+        scale: 1.6;
+        margin-bottom: 50px;
+    }
 
 
     .header {
@@ -238,7 +254,7 @@ body {
         left: 0px;
         width: 100%;
         scale: 1;
-        top: 150px;
+        top: 110px;
     }
 
     .p1 {
@@ -246,7 +262,7 @@ body {
         left: 0px;
         font-size: 22px;
         width: 90%;
-        top: 170px;
+        top: 130px;
     }
 
     #logo {
