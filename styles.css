@@ -186,7 +186,8 @@ body {
     box-shadow: #838383 1px 2px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 32px;
-    margin-top: 10px;
+    margin-top: 25px;
+    padding-bottom: 15px;
 }
 
 .explore-btn:hover {
