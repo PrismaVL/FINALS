@@ -187,7 +187,6 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 32px;
     margin-top: 25px;
-    padding-bottom: 15px;
 }
 
 .explore-btn:hover {
@@ -238,7 +237,7 @@ body {
 
     .explore-btn {
         position: relative;
-        top: 130px;
+        top: 100px;
         left: 0;
         scale: 1.6;
         margin-bottom: 50px;
