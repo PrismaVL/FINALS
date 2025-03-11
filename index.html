@@ -3,70 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - VitalyTea</title>
+    <title> testing responsiveness vw vh</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/LOGO2.png"/>
-    <script defer src="script.js"></script>
 </head>
-<body style="user-select: none;" draggable="false">
-    <div class="main">
-        <div class="header">
-            <!-- LOGO-->
-            <div id="logo">
-                <img id="headl"style="user-select: none;" draggable="false" src="images/HeaderLogo.png" alt="VitalyTEA Logo">
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img style="user-select: none;" draggable="false" src="images/HEADERLOGO.png">
             </div>
-            <!-- NAV-->
-            <nav class="top-nav">
-                <ul class="nav-links">
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">MENU</a></li>
-                    <li><a href="#">ORDER</a></li>
-                    <li><a href="Aboutus.html">ABOUT</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                </ul>
-                <!-- MOBILE MENU-->
-                <div class="hamburger" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-        <div class="content"></div>
-    </div>
-    <!-- HUGE RIGHT IMAGE-->
-    <div class="fltimg"><img id="fltim" src="images/homepage/hompag.png"></div>
-    <div class="sidebar"></div>
-
-    <div class="innertube">
-    <!-- IMAGE WITH PARAGRAPH-->
-        <img style="user-select: none;" draggable="false" id="wtv" src="images/homepage/wtv.png">
-
-        <p style="user-select: none;" class="p1">Our products and services offer a lot more that you could think of.
-            From printing different kinds of materials and papers, bindings and stitching and even more.
-            Here at Vitaly Tea, we offer all that, plus a cozy nook where you can sit, relax, and wait for your printing job to be finished.
-            And do not forget to grab our delicious mouthwatering drinks too.
-        </p>
-    <!-- BUTTON-->
-        <div class="btn-container">
-            <a href="services.html">
-                <button class="explore-btn">Explore!</button>
-            </a>
-        </div>
-    </div>
-
-    <!-- SCRIPT-->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuButton = document.querySelector(".hamburger");
-            const navLinks = document.querySelector(".nav-links");
-        
-            menuButton.addEventListener("click", function () {
-                navLinks.classList.toggle("active");
+            <div class="nav-links">
+                <a href="#">SERVICES</a>
+                <a href="#">MENU</a>
+                <a href="#">ORDER</a>
+                <a href="#">ABOUT</a>
+                <a href="#">CONTACT US</a>
+            </div>
+                            <!-- MOBILE MENU-->
+                            <div class="hamburger" onclick="toggleMenu()">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+        </nav>
+    
+        <!-- Main Content -->
+        <div class="content">
+            <img class="welcome-image" src="images/homepage/wtv.png" alt="Welcome Text">
+            <p style="user-select: none;" draggable="false" class="p1">Our products and services offer a lot more that you could think of.
+                From printing different kinds of materials and papers, bindings and stitching and even more.
+                Here at Vitaly Tea, we offer all that, plus a cozy nook where you can sit, relax, and wait for your printing job to be finished.
+                And do not forget to grab our delicious mouthwatering drinks too.
+            </p>
+            <div class="btn-container">
+                <a href="services.html">
+                    <button class="explore-btn">Explore!</button>
+                </a>
+            </div>
+            </div>
+    
+        <!-- Fixed Image on the Right -->
+        <img class="fixed-image" style="user-select: none;" draggable="false" src="images/homepage/hompag.png">
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuButton = document.querySelector(".hamburger");
+                const navLinks = document.querySelector(".nav-links");
+            
+                function toggleMenu() {
+                    if (navLinks.classList.contains("active")) {
+                        navLinks.style.opacity = "0";  
+                        navLinks.style.transform = "translateY(-10px)";
+                        
+                        setTimeout(() => {
+                            navLinks.classList.remove("active");
+                            navLinks.style.visibility = "hidden"; // Hide after animation
+                        }, 300);
+                    } else {
+                        navLinks.style.visibility = "visible"; // Show before animation starts
+                        navLinks.classList.add("active");
+                        navLinks.style.opacity = "1";
+                        navLinks.style.transform = "translateY(0)";
+                    }
+                }
+            
+                menuButton.addEventListener("click", toggleMenu);
+            
+                // Fix disappearing navbar when resizing back to desktop
+                window.addEventListener("resize", function () {
+                    if (window.innerWidth > 900) {
+                        navLinks.classList.remove("active");
+                        navLinks.style.visibility = "visible"; // Ensure it stays visible in laptop view
+                        navLinks.style.opacity = "1";
+                        navLinks.style.transform = "translateY(0)";
+                    } else {
+                        navLinks.style.visibility = "hidden"; // Hide again if mobile
+                        navLinks.style.opacity = "0";
+                        navLinks.style.transform = "translateY(-10px)";
+                    }
+                });
             });
-        });
-        
-    </script>
-
-</body>
-</html>
+            
+        </script>
+    
+    </body>
+    </html>
