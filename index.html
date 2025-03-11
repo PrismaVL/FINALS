@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
     <body>
-        <!-- Navbar -->
         <nav class="navbar">
             <div class="logo">
                 <img style="user-select: none;" draggable="false" src="images/HeaderLogo.png">
@@ -19,15 +18,12 @@
                 <a href="#">ABOUT</a>
                 <a href="#">CONTACT US</a>
             </div>
-                            <!-- MOBILE MENU-->
                             <div class="hamburger" onclick="toggleMenu()">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </div>
         </nav>
-    
-        <!-- Main Content -->
         <div class="content">
             <img class="welcome-image" style="user-select: none;" draggable="false" src="images/homepage/wtv.png" alt="Welcome Text">
             <p style="user-select: none;" draggable="false" class="p1">Our products and services offer a lot more that you could think of.
@@ -41,10 +37,7 @@
                 </a>
             </div>
             </div>
-    
-        <!-- Fixed Image on the Right -->
         <img class="fixed-image" style="user-select: none;" draggable="false" src="images/homepage/hompag.png">
-    
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const menuButton = document.querySelector(".hamburger");
@@ -57,10 +50,10 @@
                         
                         setTimeout(() => {
                             navLinks.classList.remove("active");
-                            navLinks.style.visibility = "hidden"; // Hide after animation
+                            navLinks.style.visibility = "hidden";
                         }, 300);
                     } else {
-                        navLinks.style.visibility = "visible"; // Show before animation starts
+                        navLinks.style.visibility = "visible";
                         navLinks.classList.add("active");
                         navLinks.style.opacity = "1";
                         navLinks.style.transform = "translateY(0)";
@@ -69,22 +62,19 @@
             
                 menuButton.addEventListener("click", toggleMenu);
             
-                // Fix disappearing navbar when resizing back to desktop
                 window.addEventListener("resize", function () {
                     if (window.innerWidth > 900) {
                         navLinks.classList.remove("active");
-                        navLinks.style.visibility = "visible"; // Ensure it stays visible in laptop view
+                        navLinks.style.visibility = "visible"; 
                         navLinks.style.opacity = "1";
                         navLinks.style.transform = "translateY(0)";
                     } else {
-                        navLinks.style.visibility = "hidden"; // Hide again if mobile
+                        navLinks.style.visibility = "hidden";
                         navLinks.style.opacity = "0";
                         navLinks.style.transform = "translateY(-10px)";
                     }
                 });
-            });
-            
+            }); 
         </script>
-    
     </body>
     </html>
